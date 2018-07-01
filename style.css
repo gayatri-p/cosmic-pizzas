@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    height: 50px;
+    width: 100%;
+    font-family: 'Permanent Marker', sans-serif
+}
+
+.griddy {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr
+}   
+
+.grid-container  {
+    border: 2px solid #000;
+}
+
+.pizza-container {
+    grid-row: span 4;
+}
+
+.bill-container {
+    grid-row: span 2;
+}
+
+.toppings-container,
+.crust-container {
+    grid-row: span 3;
+}
