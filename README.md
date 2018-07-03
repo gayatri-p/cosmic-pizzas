@@ -1,2 +1,3 @@
-# cosmic-pizzas
-A pizza customization and delivery website.
+# Cosmic Pizzas
+
+A pizza customization and delivery service.

@@ -7,21 +7,69 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Order your pizza!</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
 </head>
 
 <body>
 
     <header>Cosmic Pizzas</header>
 
-    <div class="griddy">
-        <div class="grid-container pizza-container">
-            <div class="pizza-image"></div>
-            <div class="pizza-title"></div>
+    <div class="grid-container">
+        <!-- THE PIZZA -->
+        <div class="grid-child pizza-container">
+            <div class="pizza-title">CUSTOMIZE YOUR PIZZA!</div>
+            <div class="pizza-image">
+                <img src="images/margherita.jpg" alt="" srcset="">
+            </div>
             <div class="pizza-caption">A classic delight loaded with extra 100% real mozzarella cheese.</div>
         </div>
-        <div class="grid-container toppings-container"></div>
-        <div class="grid-container crust-container"></div>
-        <div class="grid-container bill-container">
+        <!-- THE TOPPINGS -->
+        <div class="grid-child toppings-container">
+            <div class="toppings-head">ADD TOPPINGS</div>
+            <div class="toppings-genres">
+                <div class="toppings-genre">VEG</div>
+                <div class="toppings-genre">NON VEG</div>
+            </div>
+            <div class="toppings-body">
+                <div class="toppings-body-veg">
+                    <div class="topping">
+                        <img src="thumbnails/toppingsMushroom.jpg" alt="" srcset=""> 
+                        <span>MUSHROOM</span>
+                    </div>
+                    <div class="topping">
+                        ONION
+                    </div>
+                    <div class="topping">
+                        PANEER
+                    </div>
+                    <div class="topping">PAPARIKA</div>
+                    <div class="topping">JALAPENO</div>
+                    <div class="topping">GREEN OLIVES</div>
+                    <div class="topping">GOLDEN CORN</div>
+                    <div class="topping">CAPSICUM</div>
+                </div>
+                <div class="toppings-body-non">
+                    <div class="topping">PERI PERI CHICKEN</div>
+                    <div class="topping">BARBEQUE</div>
+                    <div class="topping">SAUSAGE</div>
+                    <div class="topping">CHICKEN TIKKA</div>
+                    <div class="topping">GRILLED CHICKEN RASHER</div>
+                </div>
+            </div>
+        </div>
+        <!-- THE CRUSTS -->
+        <div class="grid-child crust-container">
+            <div class="crust-head">CHOOSE YOUR CRUST</div>
+            <div class="crust-body">
+                <div class="crust">CLASSIC HAND TOSSED</div>
+                <div class="crust">CHEESE BURST</div>
+                <div class="crust">WHEAT THIN CRUST</div>
+                <div class="crust">FRESH PAN</div>
+                <div class="crust">NEW HAND TOSSED</div>
+            </div>
+        </div>
+        <!-- THE MONEY 💲💲💲 -->
+        <div class="grid-child bill-container">
             <div class="bill-quantity"></div>
         </div>
     </div>

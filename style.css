@@ -12,13 +12,14 @@ header {
     font-family: 'Permanent Marker', sans-serif
 }
 
-.griddy {
+.grid-container {
+    font-family: sans-serif;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr
 }   
 
-.grid-container  {
+.grid-child  {
     border: 2px solid #000;
 }
 
@@ -33,4 +34,72 @@ header {
 .toppings-container,
 .crust-container {
     grid-row: span 3;
+}
+
+/* THE STYLINGS */
+.toppings-container,
+.crust-container {
+    width: 360px;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+.toppings-head,
+.crust-head {
+    background: rgb(13, 137, 219);
+    padding: 10px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.toppings-genres {
+    display: flex;
+}
+
+.toppings-genre {
+    width: 50%;
+    padding: 5px;
+    background: #eee;
+    cursor: pointer;
+}
+
+.toppings-genre:hover {
+    background: #ccc;
+}
+
+.toppings-body {
+    position: relative;
+    height: calc(100% - 73px);
+}
+
+.toppings-body-non,
+.toppings-body-veg {
+    width: 100%;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    text-align: left;
+}
+
+.toppings-body-non {
+    display: none;
+}
+
+.toppings-body-veg {
+}
+
+.topping {
+    display: flex;
+    align-items: center
+}
+
+.topping img {
+    width: 40px;
+}
+
+.topping span {
+    margin-left: 5px;
 }
