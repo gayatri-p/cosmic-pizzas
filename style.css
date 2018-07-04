@@ -5,6 +5,22 @@
     box-sizing: border-box;
 }
 
+/*
+
+add
+
+price
+
+on
+
+hover!!!!!!!
+
+*/
+
+body {
+	background-image: url(images/background.png)
+}
+
 header {
     height: 100px;
     width: 100%;
@@ -188,6 +204,7 @@ header {
     top: 0;
     left: 0;
     transition: all 300ms ease-in-out;
+	cursor: pointer;
 }
 
 #buy-now:hover {
