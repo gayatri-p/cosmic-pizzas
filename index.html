@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Order your pizza!</title>
+    <title>Order your cosmic pizza!</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="images/favicon.png" type="image/png">
 </head>
 
 <body>
 
-    <header>Cosmic Pizzas</header>
+    <header>C<img src="images/logo.png" id="logo-img">smic Pizzas</header>
 
     <div class="grid-container">
         <!-- THE PIZZA -->
@@ -27,33 +27,65 @@
         <div class="grid-child toppings-container">
             <div class="toppings-head">ADD TOPPINGS</div>
             <div class="toppings-genres">
-                <div class="toppings-genre">VEG</div>
+                <div class="toppings-genre active">VEG</div>
                 <div class="toppings-genre">NON VEG</div>
             </div>
             <div class="toppings-body">
                 <div class="toppings-body-veg">
                     <div class="topping">
-                        <img src="thumbnails/toppingsMushroom.jpg" alt="" srcset=""> 
+                        <img src="thumbnails/toppingsMushroom.jpg" alt="" srcset="">
                         <span>MUSHROOM</span>
                     </div>
                     <div class="topping">
-                        ONION
+                        <img src="thumbnails/toppingsOnion.jpg" alt="" srcset="">
+                        <span>ONION</span>
                     </div>
                     <div class="topping">
-                        PANEER
+                        <img src="thumbnails/toppingsPaneer.jpg" alt="" srcset="">
+                        <span>PANEER</span>
                     </div>
-                    <div class="topping">PAPARIKA</div>
-                    <div class="topping">JALAPENO</div>
-                    <div class="topping">GREEN OLIVES</div>
-                    <div class="topping">GOLDEN CORN</div>
-                    <div class="topping">CAPSICUM</div>
+                    <div class="topping">
+                        <img src="thumbnails/toppingsPaparika.jpg" alt="" srcset="">
+                        <span>PAPARIKA</span>
+                    </div>
+                    <div class="topping">
+                        <img src="thumbnails/toppingsJalapeno.jpg" alt="" srcset="">
+                        <span>JALAPENO</span>
+                    </div>
+                    <div class="topping">
+                        <img src="thumbnails/toppingsOlives.jpg" alt="" srcset="">
+                        <span>GREEN OLIVES</span>
+                    </div>
+                    <div class="topping">
+                        <img src="thumbnails/toppingsGoldenCorn.jpg" alt="" srcset="">
+                        <span>GOLDEN CORN</span>
+                    </div>
+                    <div class="topping">
+                        <img src="thumbnails/toppingsCapsicum.jpg" alt="" srcset="">
+                        <span>CAPSICUM</span>
+                    </div>
                 </div>
                 <div class="toppings-body-non">
-                    <div class="topping">PERI PERI CHICKEN</div>
-                    <div class="topping">BARBEQUE</div>
-                    <div class="topping">SAUSAGE</div>
-                    <div class="topping">CHICKEN TIKKA</div>
-                    <div class="topping">GRILLED CHICKEN RASHER</div>
+                    <div class="topping">
+                        <img src="thumbnails/toppingsPeriPeriChicken.jpg" alt="" srcset="">
+                        <span>PERI PERI CHICKEN</span>
+                    </div>
+                    <div class="topping">
+                        <img src="thumbnails/toppingsBarbeque.jpg" alt="" srcset="">
+                        <span>BARBEQUE</span>
+                    </div>
+                    <div class="topping">
+                        <img src="thumbnails/toppingsChickenSausage.jpg" alt="" srcset="">
+                        <span>SAUSAGE</span>
+                    </div>
+                    <div class="topping">
+                        <img src="thumbnails/toppingsChickenTikka.jpg" alt="" srcset="">
+                        <span>CHICKEN TIKKA</span>
+                    </div>
+                    <div class="topping">
+                        <img src="thumbnails/toppingsGrilledChickenRasher.jpg" alt="" srcset="">
+                        <span>GRILLED CHICKEN RASHER</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -70,7 +102,45 @@
         </div>
         <!-- THE MONEY 💲💲💲 -->
         <div class="grid-child bill-container">
-            <div class="bill-quantity"></div>
+            <div class="bill-extras">
+                <span>Quantity</span>
+                <select name="quantity" id="">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <input type="checkbox" name="extra-cheese" id="extra-cheese">
+                <label for="extra-cheese">Extra Cheese</label>
+            </div>
+            <div class="bill">
+                <ul class="bill-list">
+                    <li>
+                        <span class="bill-label">Total:</span>
+                        <span class="bill-value">$45</span>
+                    </li>
+                    <li>
+                        <span class="bill-label">Extra Toppings:</span>
+                        <span class="bill-value">$45</span>
+                    </li>
+                    <li>
+                        <span class="bill-label">Extra Cheese:</span>
+                        <span class="bill-value">$45</span>
+                    </li>
+                    <li>
+                        <span class="bill-label">GST:</span>
+                        <span class="bill-value">$45</span>
+                    </li>
+                    <li id="grand-total">
+                        <span class="bill-label">Grand Total:</span>
+                        <span class="bill-value">$45</span>
+                    </li>
+                </ul>
+                <div id="buy-now">
+                    <a>Buy Now</a>
+                </div>
+            </div>
         </div>
     </div>
 </body>

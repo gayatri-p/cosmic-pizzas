@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
-
 * {
     margin: 0;
     padding: 0;
@@ -7,20 +6,30 @@
 }
 
 header {
-    height: 50px;
+    height: 100px;
     width: 100%;
-    font-family: 'Permanent Marker', sans-serif
+    font-family: 'Permanent Marker', sans-serif;
+    text-align: center;
+    font-size: 3.4rem;
+    color: #0d89db;
 }
 
+#logo-img {
+    width: 45px;
+    transform: translateY(5px)
+}
+
+/* GRIDDING */
+
 .grid-container {
-    font-family: sans-serif;
+    font-family: Bahnschrift, sans-serif;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr
-}   
+}
 
-.grid-child  {
-    border: 2px solid #000;
+.grid-child {
+    /* border: 2px solid #000; */
 }
 
 .pizza-container {
@@ -31,29 +40,33 @@ header {
     grid-row: span 2;
 }
 
-.toppings-container,
-.crust-container {
+.toppings-container, .crust-container {
     grid-row: span 3;
 }
 
-/* THE STYLINGS */
-.toppings-container,
+/* TOPPINGS AND CRUSTS */
+
 .crust-container {
+    margin-top: 30px;
+}
+
+.toppings-container, .crust-container {
+    margin-left: 60px;
     width: 360px;
     border-radius: 10px 10px 0 0;
     overflow: hidden;
-    text-align: center;
 }
 
-.toppings-head,
-.crust-head {
-    background: rgb(13, 137, 219);
+.toppings-head, .crust-head {
+    background: #0d89db;
     padding: 10px;
     color: #fff;
     font-size: 20px;
+    text-align: center;
 }
 
 .toppings-genres {
+    text-align: center;
     display: flex;
 }
 
@@ -68,32 +81,32 @@ header {
     background: #ccc;
 }
 
+.toppings-genre.active {
+    background: #0d89db52;
+}
+
 .toppings-body {
     position: relative;
     height: calc(100% - 73px);
 }
 
-.toppings-body-non,
-.toppings-body-veg {
+.toppings-body-non, .toppings-body-veg {
     width: 100%;
     position: absolute;
     top: 10px;
     left: 5px;
     right: 5px;
     bottom: 5px;
-    text-align: left;
 }
 
 .toppings-body-non {
     display: none;
 }
 
-.toppings-body-veg {
-}
-
 .topping {
     display: flex;
-    align-items: center
+    align-items: center;
+    cursor: pointer;
 }
 
 .topping img {
@@ -102,4 +115,84 @@ header {
 
 .topping span {
     margin-left: 5px;
+}
+
+.crust {
+    margin-left: 10px;
+    line-height: 2;
+    cursor: pointer;
+}
+
+.topping:hover, .crust:hover {
+    color: #0d89db
+}
+
+/*  'THE' PIZZA */
+
+.pizza-container {
+    text-align: center;
+}
+
+.pizza-title {
+    font-size: 1.5rem;
+}
+
+/* BILL */
+
+.bill-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.bill-extras {
+    font-size: 1.4rem;
+}
+
+.bill-extras input {
+    margin-left: 40px;
+}
+
+.bill {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.bill-list {
+    font-size: 1.2rem;
+    list-style: none;
+    border-top: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    width: 40%;
+    margin-top: 20px;
+    padding: 10px 0;
+}
+
+.bill-list > li {
+    display: flex;
+    justify-content: space-between
+}
+
+.bill-list > li#grand-total {
+    padding-top: 5px;
+    border-top: 2px solid #ccc;
+}
+
+#buy-now {
+    background: #0d89db;
+    color: #fff;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    border-radius: 3px;
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: all 300ms ease-in-out;
+}
+
+#buy-now:hover {
+    box-shadow: 2px 2px 0 #fff,
+                4px 4px 0 #0d89db;
+    top: -4px;
+    left: -4px;
 }
