@@ -129,7 +129,7 @@ header {
     width: 40px;
 }
 
-.topping span {
+.topping {
     margin-left: 5px;
 }
 
@@ -141,6 +141,12 @@ header {
 
 .topping:hover, .crust:hover {
     color: #0d89db
+}
+
+.topping.on-the-pizza::after,
+.crust.selected-crust::after {
+    content: '  ✔';
+    margin-left: 5px;
 }
 
 /*  'THE' PIZZA */
@@ -170,7 +176,7 @@ header {
 
 .bill {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
 }
 
