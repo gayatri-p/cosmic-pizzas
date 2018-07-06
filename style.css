@@ -18,7 +18,8 @@ hover!!!!!!!
 */
 
 body {
-	background-image: url(images/background.png)
+    background: #FFFCF0;
+    background-image: url(images/background.png)
 }
 
 header {
@@ -42,10 +43,6 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr
-}
-
-.grid-child {
-    /* border: 2px solid #000; */
 }
 
 .pizza-container {
@@ -113,10 +110,11 @@ header {
     left: 5px;
     right: 5px;
     bottom: 5px;
+    display: none;
 }
 
-.toppings-body-non {
-    display: none;
+.toppings-body>.active-genre {
+    display: block;
 }
 
 .topping {
@@ -143,8 +141,7 @@ header {
     color: #0d89db
 }
 
-.topping.on-the-pizza::after,
-.crust.selected-crust::after {
+.topping.on-the-pizza::after, .crust.selected-crust::after {
     content: '  ✔';
     margin-left: 5px;
 }
@@ -190,12 +187,12 @@ header {
     padding: 10px 0;
 }
 
-.bill-list > li {
+.bill-list>li {
     display: flex;
     justify-content: space-between
 }
 
-.bill-list > li#grand-total {
+.bill-list>li#grand-total {
     padding-top: 5px;
     border-top: 2px solid #ccc;
 }
@@ -210,12 +207,11 @@ header {
     top: 0;
     left: 0;
     transition: all 300ms ease-in-out;
-	cursor: pointer;
+    cursor: pointer;
 }
 
 #buy-now:hover {
-    box-shadow: 2px 2px 0 #fff,
-                4px 4px 0 #0d89db;
+    box-shadow: 2px 2px 0 #fff, 4px 4px 0 #0d89db;
     top: -4px;
     left: -4px;
 }

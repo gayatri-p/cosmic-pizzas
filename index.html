@@ -27,12 +27,12 @@
         <div class="grid-child toppings-container">
             <div class="toppings-head">ADD TOPPINGS</div>
             <div class="toppings-genres">
-                <div class="toppings-genre active">VEG</div>
-                <div class="toppings-genre">NON VEG</div>
+                <div class="toppings-genre active" onclick="openGenre(event, 'veg')">VEG</div>
+                <div class="toppings-genre" onclick="openGenre(event, 'non')">NON VEG</div>
             </div>
             <div class="toppings-body">
-                <div class="toppings-body-veg">
-                    <div class="topping" title="$565">
+                <div class="toppings-body-veg toppings-body-child active-genre">
+                    <div class="topping" title="₹565">
                         <img src="thumbnails/toppingsMushroom.png" alt="" srcset="">
                         <span>MUSHROOM</span>
                     </div>
@@ -65,7 +65,7 @@
                         <span>CAPSICUM</span>
                     </div>
                 </div>
-                <div class="toppings-body-non">
+                <div class="toppings-body-non toppings-body-child">
                     <div class="topping">
                         <img src="thumbnails/toppingsPeriPeriChicken.png" alt="" srcset="">
                         <span>PERI PERI CHICKEN</span>
@@ -104,37 +104,37 @@
         <div class="grid-child bill-container">
             <div class="bill-extras">
                 <span>Quantity</span>
-                <select name="quantity" id="">
+                <select name="quantity" id="quantity" onclick="updateBill()">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5</option>
                 </select>
-                <input type="checkbox" name="extra-cheese" id="extra-cheese">
+                <input type="checkbox" name="extra-cheese" id="extra-cheese" onclick="cheeseCheck()">
                 <label for="extra-cheese">Extra Cheese</label>
             </div>
             <div class="bill">
                 <ul class="bill-list">
                     <li>
                         <span class="bill-label">Total:</span>
-                        <span class="bill-value">$45</span>
+                        <span class="bill-value" id="total-cost">₹70</span>
                     </li>
                     <li>
                         <span class="bill-label">Extra Toppings:</span>
-                        <span class="bill-value">$45</span>
+                        <span class="bill-value" id="toppings-cost">₹0</span>
                     </li>
                     <li>
                         <span class="bill-label">Extra Cheese:</span>
-                        <span class="bill-value">$45</span>
+                        <span class="bill-value" id="cheese-cost">₹0</span>
                     </li>
                     <li>
                         <span class="bill-label">GST:</span>
-                        <span class="bill-value">$45</span>
+                        <span class="bill-value" id="gst-cost">₹0</span>
                     </li>
                     <li id="grand-total">
                         <span class="bill-label">Grand Total:</span>
-                        <span class="bill-value">$45</span>
+                        <span class="bill-value" id="grand-cost">₹70</span>
                     </li>
                 </ul>
                 <div id="buy-now">
