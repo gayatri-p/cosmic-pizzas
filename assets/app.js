@@ -29,6 +29,7 @@ $('.topping').click(e => {
         selectedToppings.splice(selectedToppings.indexOf(toppingName), 1)
     }
     updateBill()
+    updateImage(selectedToppings)
 })
 
 // CRUST SELECTION (ONE AT ONCE)
@@ -46,8 +47,6 @@ const openGenre = (e, genre) => {
 
     (genre === 'veg') ? $('.toppings-body-veg').addClass('active-genre') : $('.toppings-body-non').addClass('active-genre')
 }
-
-const cheeseCheck = _ => {updateBill()}
 
 // UPDATING BILL
 const updateBill = () => {
@@ -70,4 +69,12 @@ const updateBill = () => {
 
     grandCost = gstCost + cheeseCost + toppingsCost + totalCost
     grandCostBox.innerText = '₹'+grandCost
+}
+
+const updateImage = (toppings) => {
+    $('.yes').removeClass('yes');
+    toppings.forEach(topping => {
+        toppingID = (topping.toLowerCase()).split(' ').join('-');
+        $('#'+toppingID).addClass('yes')
+    })
 }

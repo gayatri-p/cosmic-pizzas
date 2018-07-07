@@ -19,7 +19,8 @@ hover!!!!!!!
 
 body {
     background: #FFFCF0;
-    background-image: url(images/background.png)
+    background-image: url(images/background.png);
+    background-attachment: fixed;
 }
 
 header {
@@ -142,7 +143,7 @@ header {
 }
 
 .topping.on-the-pizza::after, .crust.selected-crust::after {
-    content: '  ✔';
+    content: ' ✔️';
     margin-left: 5px;
 }
 
@@ -154,6 +155,22 @@ header {
 
 .pizza-title {
     font-size: 1.5rem;
+}
+
+.pizza-image {
+    position: relative;
+}
+
+.topping-image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+.topping-image.yes {
+    display: block;
 }
 
 /* BILL */
@@ -198,20 +215,20 @@ header {
 }
 
 #buy-now {
-    background: #0d89db;
-    color: #fff;
-    padding: 1rem 2rem;
-    font-size: 1.5rem;
-    border-radius: 3px;
     position: relative;
     top: 0;
     left: 0;
-    transition: all 300ms ease-in-out;
+    padding: 1rem 2rem;
+    border-radius: 3px;
+    font-size: 1.5rem;
     cursor: pointer;
+    background: #0d89db;
+    color: #fff;
+    transition: all 300ms ease-in-out;
 }
 
 #buy-now:hover {
-    box-shadow: 2px 2px 0 #fff, 4px 4px 0 #0d89db;
+    box-shadow: 2px 2px 0 #FFFCF0, 4px 4px 0 #0d89db;
     top: -4px;
     left: -4px;
 }

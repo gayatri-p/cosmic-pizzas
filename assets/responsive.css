@@ -1,0 +1,41 @@
+@media screen and (max-width: 850px) {
+    header {
+        height: 200px;
+    }
+    #the-pizza {
+        width: 95%;
+    }
+    .grid-child {
+        /* border: 1px solid #000; */
+        margin: 0 auto;
+    }
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    .pizza-container {
+        grid-row: span 2;
+        margin-bottom: 10px;
+    }
+    .toppings-container {
+        grid-row: span 2;
+        width: 260px;
+    }
+    .crust-container {
+        grid-row: span 1;
+        width: 260px;
+        margin-top: -80px;
+    }
+    .bill-container {
+        margin-top: -80px;
+        grid-row: span 3;
+    }
+    .bill {
+        flex-direction: column;
+        align-items: center;
+    }
+    .bill-list {
+        width: 85%;
+        margin-bottom: 20px;
+    }
+}
