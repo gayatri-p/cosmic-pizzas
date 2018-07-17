@@ -8,5 +8,6 @@ A pizza 🍕 customization and delivery 🚚 service.
 - Real time data of how your pizza would look 👀.
 - GST at only 5%.
 - Can order upto 5 pizzas at the same time.
+- Absolutely NO discount!
 
 ![screenshot](https://raw.githubusercontent.com/gayatri-p/cosmic-pizzas/master/assets/images/screenshot.PNG)
