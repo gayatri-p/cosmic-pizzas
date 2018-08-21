@@ -96,7 +96,8 @@ header {
 }
 
 .toppings-genre.active {
-    background: #0d89db52;
+    background: #0d89db;
+    color: #fff
 }
 
 .toppings-body {
@@ -186,6 +187,14 @@ header {
 
 .bill-extras input {
     margin-left: 40px;
+    cursor: pointer;
+}
+
+select {
+    background: #0d89db;
+    color: #fff;
+    font-size: 1rem;
+    font-family: 'Jua'
 }
 
 .bill {
@@ -232,3 +241,4 @@ header {
     top: -4px;
     left: -4px;
 }
+
