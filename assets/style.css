@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Jua|Patrick+Hand');
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Jua');
 * {
     margin: 0;
     padding: 0;
@@ -40,7 +40,7 @@ header {
 /* GRIDDING */
 
 .grid-container {
-    font-family: Bahnschrift, sans-serif;
+    font-family: 'Jua', Bahnschrift, sans-serif;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr
