@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="#D58E3C">
-    
+
     <title>Order your cosmic pizza!</title>
     <link rel="stylesheet" href="assets/style.css">
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png" sizes="192x192">
@@ -48,57 +48,57 @@
             </div>
             <div class="toppings-body">
                 <div class="toppings-body-veg toppings-body-child active-genre">
-                    <div class="topping" title="₹565">
+                    <div class="topping" title="₹15">
                         <img src="assets/thumbnails/toppingsMushroom.png" alt="" srcset="">
                         <span>MUSHROOM</span>
                     </div>
-                    <div class="topping">
+                    <div class="topping" title="₹15">
                         <img src="assets/thumbnails/toppingsOnion.png" alt="" srcset="">
                         <span>ONION</span>
                     </div>
-                    <div class="topping">
+                    <div class="topping" title="₹15">
                         <img src="assets/thumbnails/toppingsPaneer.png" alt="" srcset="">
                         <span>PANEER</span>
                     </div>
-                    <div class="topping">
+                    <div class="topping" title="₹15">
                         <img src="assets/thumbnails/toppingsPaparika.png" alt="" srcset="">
                         <span>PAPARIKA</span>
                     </div>
-                    <div class="topping">
+                    <div class="topping" title="₹15">
                         <img src="assets/thumbnails/toppingsJalapeno.png" alt="" srcset="">
                         <span>JALAPENO</span>
                     </div>
-                    <div class="topping">
+                    <div class="topping" title="₹15">
                         <img src="assets/thumbnails/toppingsOlives.png" alt="" srcset="">
                         <span>GREEN OLIVES</span>
                     </div>
-                    <div class="topping">
+                    <div class="topping" title="₹15">
                         <img src="assets/thumbnails/toppingsGoldenCorn.png" alt="" srcset="">
                         <span>GOLDEN CORN</span>
                     </div>
-                    <div class="topping">
+                    <div class="topping" title="₹15">
                         <img src="assets/thumbnails/toppingsCapsicum.png" alt="" srcset="">
                         <span>CAPSICUM</span>
                     </div>
                 </div>
                 <div class="toppings-body-non toppings-body-child">
-                    <div class="topping">
+                    <div class="topping" title="₹15">
                         <img src="assets/thumbnails/toppingsPeriPeriChicken.png" alt="" srcset="">
                         <span>PERI PERI CHICKEN</span>
                     </div>
-                    <div class="topping">
+                    <div class="topping" title="₹15">
                         <img src="assets/thumbnails/toppingsBarbeque.png" alt="" srcset="">
                         <span>BARBEQUE</span>
                     </div>
-                    <div class="topping">
+                    <div class="topping" title="₹15">
                         <img src="assets/thumbnails/toppingsChickenSausage.png" alt="" srcset="">
                         <span>SAUSAGE</span>
                     </div>
-                    <div class="topping">
+                    <div class="topping" title="₹15">
                         <img src="assets/thumbnails/toppingsChickenTikka.png" alt="" srcset="">
                         <span>CHICKEN TIKKA</span>
                     </div>
-                    <div class="topping">
+                    <div class="topping" title="₹15">
                         <img src="assets/thumbnails/toppingsGrilledChickenRasher.png" alt="" srcset="">
                         <span>GRILLED CHICKEN RASHER</span>
                     </div>
@@ -128,7 +128,8 @@
                     <option value="5">5</option>
                 </select>
                 <input type="checkbox" name="extra-cheese" id="extra-cheese" onclick="updateBill()">
-                <label for="extra-cheese">Extra Cheese</label>
+                <span class="checkmark" title="₹15"></span>
+                <label for="extra-cheese" title="₹15">Extra Cheese</label>
             </div>
             <div class="bill">
                 <ul class="bill-list">
@@ -153,7 +154,7 @@
                         <span class="bill-value" id="grand-cost">₹70</span>
                     </li>
                 </ul>
-                <div id="buy-now">
+                <div id="buy-now"  onclick="alert('Your pizza(s) is arriving from Alpha Centauri in 100 million years. Hope you live till then 😉')">
                     <a>Buy Now</a>
                 </div>
             </div>
