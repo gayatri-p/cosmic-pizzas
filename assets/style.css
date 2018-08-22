@@ -21,6 +21,10 @@ body {
     background: #FFFCF0;
     background-image: url(images/background.png);
     background-attachment: fixed;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 header {
@@ -185,9 +189,55 @@ header {
     font-size: 1.4rem;
 }
 
-.bill-extras input {
+.cheese {
     margin-left: 40px;
     cursor: pointer;
+    position: relative;
+}
+
+.cheese .checkmark {
+    position: absolute;
+    top: 0;
+    left: -30px;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: #FFB97B;
+    transition: .5s ease-in-out;
+}
+
+.cheese .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    transition: .5s;
+}
+
+.cheese input:checked ~ .checkmark:after {
+    display: block;
+    animation: check .3s ease-in forwards;
+}
+
+@keyframes check {
+    from { transform: rotate(0deg) }
+    to { transform: rotate(45deg) }
+}
+
+.cheese .checkmark:after {
+	transition: 5s;
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid #fff;
+    border-width: 0 2px 3px 0;
+    transition: transform .5s ease-in-out;
+    transform: rotate(0deg);
+}
+
+.bill-extras input {
+    position: absolute;
+    opacity: 0;
 }
 
 select {
@@ -241,4 +291,3 @@ select {
     top: -4px;
     left: -4px;
 }
-
