@@ -10,4 +10,4 @@ A pizza 🍕 customization and delivery 🚚 service built in pure HTML, CSS & �
 - Can order upto 5 pizzas at the same time.
 - Absolutely NO discount!
 
-![screenshot](/assets/images/screenshot.PNG)
+![screenshot](/assets/images/screenshot.png)

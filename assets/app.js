@@ -39,6 +39,11 @@ const RN = num => { return Math.round(num * 100) / 100 }
 const toggleClass = (item, c) => {
     item.classList.contains(c) ? item.classList.remove(c) : item.classList.add(c)
 }
+const camelize = str => {
+    return str.toLowerCase().replace(/(?:^\w|[A-Z]|\b\w)/g, (letter, index) => {
+      return index == 0 ? letter.toLowerCase() : letter.toUpperCase()
+    }).replace(/\s+/g, '')
+  }
 
 // TOPPING SELECTION (AS MANY AS YOU WANT)
 toppingDivs.forEach(div =>
@@ -64,10 +69,13 @@ toppingDivs.forEach(div =>
 )
 
 // CRUST SELECTION (ONE AT ONCE)
+let selectedCrust = 'CLASSIC HAND TOSSED' // default
 crustDivs.forEach(div => {
     div.addEventListener('click', e => {
         document.querySelector('.selected-crust').classList.remove('selected-crust')
         e.target.classList.add('selected-crust')
+        selectedCrust = e.target.innerText
+        updateBill()
     })
 })
 
@@ -84,22 +92,24 @@ const openGenre = (e, genre) => {
 // UPDATING BILL
 const updateBill = () => {
     let n = Number(quantity.options[quantity.selectedIndex].value)
-
-    // ASSUMING ALL TOPPINGS TO COST THE SAME
-    let toppingsCount = selectedToppings.length
-
-    totalCost = 70 * n
+    
+    // CRUST BILL
+    totalCost = crustPrices[camelize(selectedCrust)] * n
     totalCostBox.innerText = '₹' + totalCost
-
-    toppingsCost = toppingsCount * 15 * n
+    // TOPPINGS BILL
+    let toppingsCost = 0
+    selectedToppings.forEach(item => {
+        toppingsCost += toppingPrices[camelize(item)]
+    })
+    toppingsCost *= n
     toppingsCostBox.innerText = '₹' + toppingsCost
-
+    // CHEESE
     cheeseCost = document.getElementById('extra-cheese').checked ? 15 * n : 0
     cheeseCostBox.innerText = '₹' + cheeseCost
-
+    // GST
     gstCost = RN(0.05 * (cheeseCost + toppingsCost + totalCost))
     gstCostBox.innerText = '₹' + gstCost
-
+    // GRAND COST
     grandCost = gstCost + cheeseCost + toppingsCost + totalCost
     grandCostBox.innerText = '₹' + grandCost
 }
