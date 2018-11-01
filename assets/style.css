@@ -5,18 +5,6 @@
     box-sizing: border-box;
 }
 
-/*
-
-add
-
-price
-
-on
-
-hover!!!!!!!
-
-*/
-
 body {
     background: #FFFCF0;
     background-image: url(images/background.png);
@@ -273,22 +261,17 @@ select {
 }
 
 #buy-now {
-    position: relative;
-    top: 0;
-    left: 0;
-    padding: .5rem 1.5rem .5rem .75rem;
+    padding: .5rem 1rem;
     border-radius: 3px;
-    font-size: 1.5rem;
+    font-size: 2rem;
     cursor: pointer;
     background: #0d89db;
     color: #fff;
-    transition: all 300ms ease-in-out;
-    -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    transition: all .25s ease-in;
+    box-shadow: 0 0 30px #000a;
 }
 
 #buy-now:hover {
-    box-shadow: 2px 2px 0 #FFFCF0, 4px 4px 0 #0d89db;
-    top: -4px;
-    left: -4px;
+    box-shadow: 0 0 10px #0009;
+    transform: scale(.98)
 }
