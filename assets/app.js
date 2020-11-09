@@ -120,3 +120,13 @@ const updateImage = (toppings) => {
         document.querySelector('#' + toppingID).classList.add('yes')
     })
 }
+
+buyNow = document.getElementById('buy-now')
+closeBtn = document.getElementById('close')
+popup = document.getElementById('popup')
+buyNow.addEventListener('click', _ => {
+    popup.classList.add('open')
+})
+closeBtn.addEventListener('click', _ => {
+    popup.classList.remove('open')
+})
